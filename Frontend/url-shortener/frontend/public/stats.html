@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Statistics - URL Shortener</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>URL Statistics</h1>
+            <p>View analytics for all your shortened URLs</p>
+            <nav>
+                <a href="index.html">Shorten URLs</a>
+                <a href="stats.html" class="active">View Statistics</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="stats-overview">
+                <div class="stat-card">
+                    <h3>Total URLs</h3>
+                    <span id="totalUrls" class="stat-number">0</span>
+                </div>
+                <div class="stat-card">
+                    <h3>Active URLs</h3>
+                    <span id="activeUrls" class="stat-number">0</span>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Clicks</h3>
+                    <span id="totalClicks" class="stat-number">0</span>
+                </div>
+            </div>
+
+            <div class="urls-table-section">
+                <h2>All Shortened URLs</h2>
+                <div class="table-container">
+                    <table id="urlsTable" class="urls-table">
+                        <thead>
+                            <tr>
+                                <th>Short URL</th>
+                                <th>Original URL</th>
+                                <th>Created</th>
+                                <th>Expires</th>
+                                <th>Clicks</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="urlsTableBody">
+                            <tr>
+                                <td colspan="7" class="empty-state">Loading URLs...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="urlDetails" class="url-details" style="display: none;">
+                <h3>URL Details</h3>
+                <div id="urlDetailsContent"></div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Afford Medical Technologies Private Limited</p>
+        </footer>
+    </div>
+
+    <script src="stats.js"></script>
+</body>
+</html>

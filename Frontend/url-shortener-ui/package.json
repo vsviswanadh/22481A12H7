@@ -1,0 +1,19 @@
+{
+  "name": "url-shortener-ui",
+  "version": "1.0.0",
+  "description": "Frontend UI for URL shortener application",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx live-server public --port=3001",
+    "build": "echo 'Building static files...' && mkdir -p dist && xcopy public dist /E /I",
+    "serve": "npx http-server dist -p 3001",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["url-shortener", "frontend", "ui", "javascript", "html", "css"],
+  "author": "Vanapalli Sai Viswanadh",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "http-server": "^14.1.1"
+  }
+}
